@@ -24,6 +24,7 @@ Atributo - Métodos:
 *Instanciamentos e objetos, se definem apenas ao método iniciado (__init__).
 *Métodos também são atributos.
 
+
 Artigo sobre o uso do Self: http://archive.is/cX2mq
 
 Atributo de Dados:
