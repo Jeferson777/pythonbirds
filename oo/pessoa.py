@@ -17,13 +17,20 @@ https://www.youtube.com/embed/gtgI7PC_TJk
 https://www.youtube.com/watch?v=j6B8shHXzks
 https://pt.wikipedia.org/wiki/Classe_(programa%C3%A7%C3%A3o)
 
-Métodos:
+Atributo - Métodos:
 *Métodos são funções construidas e pertencentes a uma classe.
 *Cada função ou método contém suas próprias funcionalidade.
 *Os métodos devem conter a palavra chave "Self" como primeiro parâmetro, sendo isolado ou não.
 *Instanciamentos e objetos, se definem apenas ao método iniciado (__init__).
+*Métodos também são atributos.
+
 
 Artigo sobre o uso do Self: http://archive.is/cX2mq
+
+Atributo de Dados:
+*São instânciamentos individuais de parâmetros nos métodos;
+*Podem receberem valores e serem chamados individualmente;
+*São considerados objetos.
 '''
 
 
