@@ -41,20 +41,24 @@ Atributo de Dados:
 # Construindo uma Classe (Objeto):
 class Pessoa:
     # Criando um método iniciando a classe:
-    def __init__(self, nome="None", idade=40):
+    def __init__(self, *filhos, nome="None", idade=40):
         self.idade = idade  # Atributo de dado
         self.nome = nome    # Atributo de dado
+        self.filhos = list(filhos)
+
     # Construindo um Método
     def cumprimentar(self):
         return f'Olá {id(self)}'
 
+
 # Aplicando orientação a objeto:
 if __name__ == '__main__':
-    p = Pessoa('João') # Atribuindo o objeto e passando um dado de parâmetro. Aqui ele é iniciado.
-    print(Pessoa.cumprimentar(p)) # Modo errado.
-    print(id(p))
-    print(p.cumprimentar()) # Modo correto.
-    print(p.nome) # Imprimindo o atributo nome da classe Pessoa.
-    p.nome = 'Jeferson' # Atribuindo um outro valor ao parâmetro.
-    print(p.nome) # Imprimindo
-    print(p.idade)
+    jeferson = Pessoa(nome='Jeferson') # Atribuindo o objeto, passando um dado de parâmetro. Aqui ele é iniciado.
+    pingo = Pessoa(jeferson, nome='Pingo')
+    print(id(pingo))
+    print(pingo.cumprimentar()) # Modo correto.
+    print(pingo.nome) # Imprimindo o atributo nome da classe Pessoa.
+    print(pingo.idade)
+
+    for filho in pingo.filhos:
+        print(filho.nome)
