@@ -44,7 +44,7 @@ class Pessoa:
     def __init__(self, *filhos, nome="None", idade=40):
         self.idade = idade  # Atributo de dado
         self.nome = nome    # Atributo de dado
-        self.filhos = list(filhos)
+        self.filhos = list(filhos) # Atributo de dado com lista.
 
     # Construindo um Método
     def cumprimentar(self):
@@ -54,6 +54,7 @@ class Pessoa:
 # Aplicando orientação a objeto:
 if __name__ == '__main__':
     jeferson = Pessoa(nome='Jeferson') # Atribuindo o objeto, passando um dado de parâmetro. Aqui ele é iniciado.
+    print(jeferson.nome)
     pingo = Pessoa(jeferson, nome='Pingo')
     print(id(pingo))
     print(pingo.cumprimentar()) # Modo correto.
@@ -62,3 +63,13 @@ if __name__ == '__main__':
 
     for filho in pingo.filhos:
         print(filho.nome)
+
+    # Criando Atributos dinamicamente em tempo de execução.
+    # Aconselhável apenas para momentos isolados, pois o ideal é instanciar em um método na classe.
+    pingo.sobrenome = 'P. Pingous'
+    print(pingo.sobrenome)
+    # Removendo o atributo dinamicamente:
+    del pingo.sobrenome
+    # Atributo especial __dict__, permite verificar todos os atributos de instância na classe:
+    print(jeferson.__dict__)
+    print(pingo.__dict__)
