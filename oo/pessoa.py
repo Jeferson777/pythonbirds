@@ -40,6 +40,8 @@ Atributo de Dados:
 
 # Construindo uma Classe (Objeto):
 class Pessoa:
+    olhos = 2
+
     # Criando um método iniciando a classe:
     def __init__(self, *filhos, nome="None", idade=40):
         self.idade = idade  # Atributo de dado
@@ -73,3 +75,17 @@ if __name__ == '__main__':
     # Atributo especial __dict__, permite verificar todos os atributos de instância na classe:
     print(jeferson.__dict__)
     print(pingo.__dict__)
+
+    # Aplicando atributos de classe:
+    print(f'Toda pessoa tem {Pessoa.olhos} olhos')
+    print(f'O meu cachorro {pingo.nome}, tem {pingo.olhos} olhos.')
+    print(f'O {jeferson.nome}, tem {jeferson.olhos} olhos.')
+    print(id(jeferson.nome), id(pingo.nome))
+    # Atributo da classe sempre possui o mesmo ID:
+    print(id(jeferson.olhos), id(pingo.olhos))
+
+    # Alternado atributo de classe e instanciando apenas ao método:
+    pingo.olhos = 1
+    print(pingo.__dict__)
+    # Atributo da classe com novo ID a cada modificação:
+    print(id(jeferson.olhos), id(pingo.olhos))
