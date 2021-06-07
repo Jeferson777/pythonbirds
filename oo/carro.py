@@ -17,7 +17,7 @@ Ele oferece os seguintes atributos:
 A Direção terá a responsabilidade de controlar a direção. Ela oferece
 os seguintes atributos:
 
-* Valor de diração com valores possíveis: Norte, Sul, Leste, Oeste.
+* Valor de diração com  valores possíveis: Norte, Sul, Leste, Oeste.
 * Método girar_a_direita
 
     Exemplo:
